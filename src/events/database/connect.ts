@@ -1,0 +1,14 @@
+import { App } from "../../structures/App";
+import { Event } from "../../structures/Event";
+
+export = class extends Event {
+    constructor(app: App) {
+        super(app, {
+            name: 'connect'
+        });
+    }
+
+    run = async () => {
+        console.log(`[DATABASE] Successfully connected. ✔️`);
+    };
+};
